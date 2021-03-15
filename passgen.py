@@ -46,5 +46,7 @@ def generate_password(argv):
 
 
 if __name__ == '__main__':
-    show_menu()
-    print(f"\nPassword generated: {generate_password(sys.argv)}")
+    if len(sys.argv) == 1:
+        show_menu()
+    else:
+        print(f"\nPassword generated: {generate_password(sys.argv)}")
